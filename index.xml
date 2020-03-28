@@ -63,11 +63,29 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
     </item>
     
     <item>
+      <title>AlertManager</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/alertmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/alertmanager/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
       <title>Artifactory</title>
       <link>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>cAdvisor</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/cadvisor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/cadvisor/</guid>
       <description>TODO</description>
     </item>
     
@@ -108,7 +126,7 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
     </item>
     
     <item>
-      <title>Haste</title>
+      <title>Hastebin</title>
       <link>https://matusnovak.github.io/homelab/tutorial/5_services/haste/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -126,11 +144,38 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
     </item>
     
     <item>
+      <title>MongoDB</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/mongodb/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
       <title>NextCloud &#43; OnlyOffice</title>
       <link>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Node Exporter</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/nodeexporter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/nodeexporter/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>OpenLDAP</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/openldap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/openldap/</guid>
       <description>TODO</description>
     </item>
     
@@ -167,6 +212,24 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/postgres/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/prometheus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/prometheus/</guid>
       <description>TODO</description>
     </item>
     

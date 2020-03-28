@@ -27,7 +27,15 @@
   </url>
   
   <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/alertmanager/</loc>
+  </url>
+  
+  <url>
     <loc>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/cadvisor/</loc>
   </url>
   
   <url>
@@ -63,7 +71,19 @@
   </url>
   
   <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/mongodb/</loc>
+  </url>
+  
+  <url>
     <loc>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/nodeexporter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/openldap/</loc>
   </url>
   
   <url>
@@ -80,6 +100,14 @@
   
   <url>
     <loc>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/prometheus/</loc>
   </url>
   
   <url>
