@@ -151,7 +151,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/phpldapadmin/</guid>
-      <description>TODO</description>
+      <description>Official website: http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page Homelab url: https://ldap.DOMAIN_NAME/ Authentication: Login is done via a &amp;ldquo;DN&amp;rdquo; and a password ADMIN_PASSWORD. Stack name: base (deployed via ./deploy.sh base).  Description A web based LDAP browser to manage OpenLDAP server. You can use this web interface to create/edit/delete users and roles/groups.
+Login DN The Login DN is a &amp;ldquo;distinguished name&amp;rdquo; and usually starts with a keyword such as &amp;ldquo;dc&amp;rdquo;. In this case, in order to log-in, your login DN is a combination of dc=admin and DOMAIN_COMPONENT defined in your .</description>
     </item>
     
     <item>
@@ -169,7 +170,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</guid>
-      <description>TODO</description>
+      <description>Official website: https://www.portainer.io/ Homelab url: https://portainer.DOMAIN_NAME/ Authentication: Can be logged in via administrator account created during configuration or via LDAP. Stack name: base (deployed via ./deploy.sh base).  Description Making Docker Management Easy. Build and manage your Docker environments with ease today.
+&amp;ndash; portainer.io
+Configuration Before configuring the LDAP authentication, make sure you have created at least one user via the phpLdapAdmin and added that user to the &amp;ldquo;portainer&amp;rdquo; group.</description>
     </item>
     
     <item>
@@ -214,7 +217,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/traefik/</guid>
-      <description>TODO</description>
+      <description>Official website: https://containo.us/traefik/ Homelab url: https://traefik.DOMAIN_NAME/dashboard/#/ Authentication: Basic auth using username admin and password ADMIN_PASSWORD. Stack name: base (deployed via ./deploy.sh base).  Description Traefik serves as a reverse proxy that routes traffic from port 80 and port 443 (defined in .env file via HTTP_PORT and HTTPS_PORT) to the destination Docker container based on the URL rule. Traefik also exposes port 8080 (this port is exposed only to the internal Docker network) which serves the dashboard as seen in the screenshot above.</description>
     </item>
     
   </channel>

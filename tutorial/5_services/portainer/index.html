@@ -12,18 +12,18 @@
     <title>Portainer :: Homelab</title>
 
     
-    <link href="/homelab/css/nucleus.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/fontawesome-all.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hybrid.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/featherlight.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/perfect-scrollbar.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/auto-complete.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/atom-one-dark-reasonable.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/theme.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hugo-theme.css?1585405155" rel="stylesheet">
+    <link href="/homelab/css/nucleus.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/fontawesome-all.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hybrid.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/featherlight.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/perfect-scrollbar.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/auto-complete.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/atom-one-dark-reasonable.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/theme.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hugo-theme.css?1585430646" rel="stylesheet">
     
 
-    <script src="/homelab/js/jquery-3.3.1.min.js?1585405155"></script>
+    <script src="/homelab/js/jquery-3.3.1.min.js?1585430646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,14 +49,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/homelab/js/lunr.min.js?1585405155"></script>
-<script type="text/javascript" src="/homelab/js/auto-complete.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/lunr.min.js?1585430646"></script>
+<script type="text/javascript" src="/homelab/js/auto-complete.js?1585430646"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/matusnovak.github.io\/homelab";
     
 </script>
-<script type="text/javascript" src="/homelab/js/search.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/search.js?1585430646"></script>
 
     
   </div>
@@ -783,7 +783,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#making-users-administrators">Making users administrators</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -807,7 +819,86 @@
 
 
 
-<p>TODO</p>
+
+
+<p><img src="../images/portainer.png" alt="Screenshot" /></p>
+
+<ul>
+<li><strong>Official website:</strong> <a href="https://www.portainer.io/">https://www.portainer.io/</a></li>
+<li><strong>Homelab url:</strong> <code>https://portainer.DOMAIN_NAME/</code></li>
+<li><strong>Authentication:</strong> Can be logged in via administrator account created during configuration or via LDAP.</li>
+<li><strong>Stack name:</strong> <code>base</code> (deployed via <code>./deploy.sh base</code>).</li>
+</ul>
+
+<h3 id="description">Description</h3>
+
+<p>Making Docker Management Easy. Build and manage your Docker environments with ease today.</p>
+
+<p>&ndash; portainer.io</p>
+
+<h3 id="configuration">Configuration</h3>
+
+
+<div class="notices info" ><p>Before configuring the LDAP authentication, make sure you have created at least one user via the phpLdapAdmin and added that user to the &ldquo;portainer&rdquo; group. <a href="/homelab/tutorial/5_services/phpldapadmin/"><strong>Read here how to add a new LDAP user.</strong></a></p>
+</div>
+
+
+<p>First create the administrator account. You are free to choose any username or password.</p>
+
+<p><img src="../images/portainer_setup_0.png" alt="Screenshot" /></p>
+
+<p>Next, you should automatically see the the Docker endpoint with ~10 running containers.</p>
+
+<p><img src="../images/portainer_setup_1.png" alt="Screenshot" /></p>
+
+<p>To setup LDAP authentication, navigate to Settings -&gt; Authentication and click &ldquo;LDAP&rdquo; from the middle column.</p>
+
+<p><img src="../images/portainer_setup_2.png" alt="Screenshot" /></p>
+
+<p>Next, specify the LDAP server hostname followed by a port, reader credentials, and a password. Don&rsquo;t forget to test the connectivity too.</p>
+
+<ul>
+<li><strong>LDAP Server:</strong> Must be exactly <code>openldap:389</code>. This is the hostname to the OpenLDAP Docker container within the internal Docker network. The <code>openldap</code> resolves to <code>172.18.0.X</code>.</li>
+<li><strong>Anonymous mode:</strong> Off</li>
+<li><strong>Reader DN:</strong> <code>cn=admin,DOMAIN_COMPONENT</code>. This is the login DN as specified in the <a href="/homelab/tutorial/5_services/phpldapadmin/"><strong>phpLdapAdmin documentation.</strong></a></li>
+<li><strong>Password:</strong> This is the password used by the reader and it is the password <code>ADMIN_PASSWORD</code> from <code>.env</code> file.</li>
+</ul>
+
+<p><img src="../images/portainer_setup_3.png" alt="Screenshot" /></p>
+
+<p>For the LDAP security leave everything to Off. The LDAP communication happens only within the Docker network and there is no outside access to that. There would be no point doing TLS anyway.</p>
+
+<ul>
+<li><strong>Use StartTLS:</strong> Off</li>
+<li><strong>Use TLS:</strong> Off</li>
+<li><strong>Skip verification of server certificate:</strong> Off</li>
+</ul>
+
+<p><img src="../images/portainer_setup_4.png" alt="Screenshot" /></p>
+
+<p>Enable automatic user provisioning. The Portainer will automatically create users if a new user logs in based on LDAP user credentials.</p>
+
+<ul>
+<li><strong>Automatic user provisioning:</strong> On</li>
+</ul>
+
+<p><img src="../images/portainer_setup_5.png" alt="Screenshot" /></p>
+
+<p>Finally, you will need to set the Base DN to the organisation unit of <code>users</code> from LDAP. LDAP Users are created in organisational unit <code>ou=users,DOMAIN_COMPONENT</code> (For example: <code>ou=users,dc=example,dc=homelab,dc=com</code>). You don&rsquo;t need to fill in the group details because that feature is only useful in Portainer Enterprise mode (you need a license).</p>
+
+<ul>
+<li><strong>Base DN:</strong> Must be set to <code>ou=users,DOMAIN_COMPONENT</code>.</li>
+<li><strong>Username:</strong> Must be set to <code>uid</code>.</li>
+<li><strong>Filter:</strong> Must be set to <code>(memberOf=cn=portainer,ou=groups,DOMAIN_COMPONENT)</code>.</li>
+</ul>
+
+<p><img src="../images/portainer_setup_6.png" alt="Screenshot" /></p>
+
+<p><strong>That&rsquo;s all.</strong></p>
+
+<h3 id="making-users-administrators">Making users administrators</h3>
+
+<p>To make the user (that has logged in via LDAP credentials) an administrator, simply go to the Settings -&gt; Users, select the correct user, and set the &ldquo;Administrator&rdquo; to On. If the user is not visible in the list of users, make sure the user has logged in at least once.</p>
 
 
 <footer class="footline">
@@ -2916,19 +3007,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/homelab/js/clipboard.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585405155"></script>
-    <script src="/homelab/js/jquery.sticky.js?1585405155"></script>
-    <script src="/homelab/js/featherlight.min.js?1585405155"></script>
-    <script src="/homelab/js/highlight.pack.js?1585405155"></script>
+    <script src="/homelab/js/clipboard.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585430646"></script>
+    <script src="/homelab/js/jquery.sticky.js?1585430646"></script>
+    <script src="/homelab/js/featherlight.min.js?1585430646"></script>
+    <script src="/homelab/js/highlight.pack.js?1585430646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585405155"></script>
-    <script src="/homelab/js/learn.js?1585405155"></script>
-    <script src="/homelab/js/hugo-learn.js?1585405155"></script>
+    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585430646"></script>
+    <script src="/homelab/js/learn.js?1585430646"></script>
+    <script src="/homelab/js/hugo-learn.js?1585430646"></script>
 
-    <link href="/homelab/mermaid/mermaid.css?1585405155" rel="stylesheet" />
-    <script src="/homelab/mermaid/mermaid.js?1585405155"></script>
+    <link href="/homelab/mermaid/mermaid.css?1585430646" rel="stylesheet" />
+    <script src="/homelab/mermaid/mermaid.js?1585430646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

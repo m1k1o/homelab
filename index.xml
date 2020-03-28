@@ -18,7 +18,7 @@
       <guid>https://matusnovak.github.io/homelab/tutorial/1_requirements/</guid>
       <description>In order to install the services you will need the following:
 System requirements  Any Intel or AMD based 64-bit Linux distribution. Preferably an Ubuntu. Sorry, Raspberry Pi is not supported. At least 4GB of free memory At least 8GB of disk space  Docker You will also need Docker and Docker Compose.
-Dependencies Additionally, you will need Python3 and git. If you are on an Ubuntu, you can install them via: sudo apt-get install -y python3 git.</description>
+Dependencies Additionally, you will need Python3 (with bcrypt) and git. If you are on an Ubuntu, you can install them via:</description>
     </item>
     
     <item>
@@ -48,9 +48,9 @@ Make sure you configure these variables! The default values are only as an examp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/4_deploy/</guid>
-      <description>After you have configured the environment variables, you can deploy the initial stack.
-Don&amp;rsquo;t use docker-compose up within the root directory. It will only mess up things. Use the provided deploy.sh script instead.
- As you may have already noticed, the root folder contains multiple docker-compose.*.yml files. Each one of these files is considered a stack. All of these files define a set of services. Each service will be deployed based on the environment variables in the .</description>
+      <description>Create configuration files and After you have configured the .env file you will need to setup the configuration files and folder structure. All you have to do is to run the setup.py script as root:
+sudo ./setup.py Docker stacks After you have configured the environment variables, and have created the data folders, you can deploy the initial stack.
+Don&amp;rsquo;t use docker-compose up within the root directory. It will only mess up things.</description>
     </item>
     
     <item>
@@ -194,7 +194,8 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/phpldapadmin/</guid>
-      <description>TODO</description>
+      <description>Official website: http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page Homelab url: https://ldap.DOMAIN_NAME/ Authentication: Login is done via a &amp;ldquo;DN&amp;rdquo; and a password ADMIN_PASSWORD. Stack name: base (deployed via ./deploy.sh base).  Description A web based LDAP browser to manage OpenLDAP server. You can use this web interface to create/edit/delete users and roles/groups.
+Login DN The Login DN is a &amp;ldquo;distinguished name&amp;rdquo; and usually starts with a keyword such as &amp;ldquo;dc&amp;rdquo;. In this case, in order to log-in, your login DN is a combination of dc=admin and DOMAIN_COMPONENT defined in your .</description>
     </item>
     
     <item>
@@ -212,7 +213,9 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</guid>
-      <description>TODO</description>
+      <description>Official website: https://www.portainer.io/ Homelab url: https://portainer.DOMAIN_NAME/ Authentication: Can be logged in via administrator account created during configuration or via LDAP. Stack name: base (deployed via ./deploy.sh base).  Description Making Docker Management Easy. Build and manage your Docker environments with ease today.
+&amp;ndash; portainer.io
+Configuration Before configuring the LDAP authentication, make sure you have created at least one user via the phpLdapAdmin and added that user to the &amp;ldquo;portainer&amp;rdquo; group.</description>
     </item>
     
     <item>
@@ -257,7 +260,7 @@ Don&amp;rsquo;t use docker-compose up within the root directory. It will only me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/5_services/traefik/</guid>
-      <description>TODO</description>
+      <description>Official website: https://containo.us/traefik/ Homelab url: https://traefik.DOMAIN_NAME/dashboard/#/ Authentication: Basic auth using username admin and password ADMIN_PASSWORD. Stack name: base (deployed via ./deploy.sh base).  Description Traefik serves as a reverse proxy that routes traffic from port 80 and port 443 (defined in .env file via HTTP_PORT and HTTPS_PORT) to the destination Docker container based on the URL rule. Traefik also exposes port 8080 (this port is exposed only to the internal Docker network) which serves the dashboard as seen in the screenshot above.</description>
     </item>
     
   </channel>

@@ -12,18 +12,18 @@
     <title>Traefik :: Homelab</title>
 
     
-    <link href="/homelab/css/nucleus.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/fontawesome-all.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hybrid.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/featherlight.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/perfect-scrollbar.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/auto-complete.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/atom-one-dark-reasonable.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/theme.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hugo-theme.css?1585405155" rel="stylesheet">
+    <link href="/homelab/css/nucleus.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/fontawesome-all.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hybrid.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/featherlight.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/perfect-scrollbar.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/auto-complete.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/atom-one-dark-reasonable.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/theme.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hugo-theme.css?1585430646" rel="stylesheet">
     
 
-    <script src="/homelab/js/jquery-3.3.1.min.js?1585405155"></script>
+    <script src="/homelab/js/jquery-3.3.1.min.js?1585430646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,14 +49,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/homelab/js/lunr.min.js?1585405155"></script>
-<script type="text/javascript" src="/homelab/js/auto-complete.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/lunr.min.js?1585430646"></script>
+<script type="text/javascript" src="/homelab/js/auto-complete.js?1585430646"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/matusnovak.github.io\/homelab";
     
 </script>
-<script type="text/javascript" src="/homelab/js/search.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/search.js?1585430646"></script>
 
     
   </div>
@@ -783,7 +783,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -807,7 +817,22 @@
 
 
 
-<p>TODO</p>
+
+
+<p><img src="../images/traefik.png" alt="Screenshot" /></p>
+
+<ul>
+<li><strong>Official website:</strong> <a href="https://containo.us/traefik/">https://containo.us/traefik/</a></li>
+<li><strong>Homelab url:</strong> <code>https://traefik.DOMAIN_NAME/dashboard/#/</code></li>
+<li><strong>Authentication:</strong> Basic auth using username <code>admin</code> and password <code>ADMIN_PASSWORD</code>.</li>
+<li><strong>Stack name:</strong> <code>base</code> (deployed via <code>./deploy.sh base</code>).</li>
+</ul>
+
+<h3 id="description">Description</h3>
+
+<p>Traefik serves as a reverse proxy that routes traffic from port 80 and port 443 (defined in <code>.env</code> file via <code>HTTP_PORT</code> and <code>HTTPS_PORT</code>) to the destination Docker container based on the URL rule. Traefik also exposes port 8080 (this port is exposed only to the internal Docker network) which serves the dashboard as seen in the screenshot above. This dashboard can be accessed by going to the address <code>https://traefik.DOMAIN_NAME/dashboard/#/</code> and authenticating as an administrator. The Traefik handles the routing, so you don&rsquo;t have to specify the internal port.</p>
+
+<p><strong>No additional configuration needed!</strong></p>
 
 
 <footer class="footline">
@@ -2910,19 +2935,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/homelab/js/clipboard.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585405155"></script>
-    <script src="/homelab/js/jquery.sticky.js?1585405155"></script>
-    <script src="/homelab/js/featherlight.min.js?1585405155"></script>
-    <script src="/homelab/js/highlight.pack.js?1585405155"></script>
+    <script src="/homelab/js/clipboard.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585430646"></script>
+    <script src="/homelab/js/jquery.sticky.js?1585430646"></script>
+    <script src="/homelab/js/featherlight.min.js?1585430646"></script>
+    <script src="/homelab/js/highlight.pack.js?1585430646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585405155"></script>
-    <script src="/homelab/js/learn.js?1585405155"></script>
-    <script src="/homelab/js/hugo-learn.js?1585405155"></script>
+    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585430646"></script>
+    <script src="/homelab/js/learn.js?1585430646"></script>
+    <script src="/homelab/js/hugo-learn.js?1585430646"></script>
 
-    <link href="/homelab/mermaid/mermaid.css?1585405155" rel="stylesheet" />
-    <script src="/homelab/mermaid/mermaid.js?1585405155"></script>
+    <link href="/homelab/mermaid/mermaid.css?1585430646" rel="stylesheet" />
+    <script src="/homelab/mermaid/mermaid.js?1585430646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

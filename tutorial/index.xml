@@ -18,7 +18,7 @@
       <guid>https://matusnovak.github.io/homelab/tutorial/1_requirements/</guid>
       <description>In order to install the services you will need the following:
 System requirements  Any Intel or AMD based 64-bit Linux distribution. Preferably an Ubuntu. Sorry, Raspberry Pi is not supported. At least 4GB of free memory At least 8GB of disk space  Docker You will also need Docker and Docker Compose.
-Dependencies Additionally, you will need Python3 and git. If you are on an Ubuntu, you can install them via: sudo apt-get install -y python3 git.</description>
+Dependencies Additionally, you will need Python3 (with bcrypt) and git. If you are on an Ubuntu, you can install them via:</description>
     </item>
     
     <item>
@@ -48,9 +48,9 @@ Make sure you configure these variables! The default values are only as an examp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://matusnovak.github.io/homelab/tutorial/4_deploy/</guid>
-      <description>After you have configured the environment variables, you can deploy the initial stack.
-Don&amp;rsquo;t use docker-compose up within the root directory. It will only mess up things. Use the provided deploy.sh script instead.
- As you may have already noticed, the root folder contains multiple docker-compose.*.yml files. Each one of these files is considered a stack. All of these files define a set of services. Each service will be deployed based on the environment variables in the .</description>
+      <description>Create configuration files and After you have configured the .env file you will need to setup the configuration files and folder structure. All you have to do is to run the setup.py script as root:
+sudo ./setup.py Docker stacks After you have configured the environment variables, and have created the data folders, you can deploy the initial stack.
+Don&amp;rsquo;t use docker-compose up within the root directory. It will only mess up things.</description>
     </item>
     
   </channel>

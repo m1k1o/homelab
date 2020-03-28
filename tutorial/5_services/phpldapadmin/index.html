@@ -12,18 +12,18 @@
     <title>phpLdapAdmin :: Homelab</title>
 
     
-    <link href="/homelab/css/nucleus.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/fontawesome-all.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hybrid.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/featherlight.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/perfect-scrollbar.min.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/auto-complete.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/atom-one-dark-reasonable.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/theme.css?1585405155" rel="stylesheet">
-    <link href="/homelab/css/hugo-theme.css?1585405155" rel="stylesheet">
+    <link href="/homelab/css/nucleus.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/fontawesome-all.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hybrid.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/featherlight.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/perfect-scrollbar.min.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/auto-complete.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/atom-one-dark-reasonable.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/theme.css?1585430646" rel="stylesheet">
+    <link href="/homelab/css/hugo-theme.css?1585430646" rel="stylesheet">
     
 
-    <script src="/homelab/js/jquery-3.3.1.min.js?1585405155"></script>
+    <script src="/homelab/js/jquery-3.3.1.min.js?1585430646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,14 +49,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/homelab/js/lunr.min.js?1585405155"></script>
-<script type="text/javascript" src="/homelab/js/auto-complete.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/lunr.min.js?1585430646"></script>
+<script type="text/javascript" src="/homelab/js/auto-complete.js?1585430646"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/matusnovak.github.io\/homelab";
     
 </script>
-<script type="text/javascript" src="/homelab/js/search.js?1585405155"></script>
+<script type="text/javascript" src="/homelab/js/search.js?1585430646"></script>
 
     
   </div>
@@ -783,7 +783,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#login-dn">Login DN</a></li>
+<li><a href="#creating-a-user">Creating a user</a></li>
+<li><a href="#adding-a-user-to-role-group">Adding a user to role/group</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -807,7 +820,66 @@
 
 
 
-<p>TODO</p>
+
+
+<p><img src="../images/phpldapadmin.png" alt="Screenshot" /></p>
+
+<ul>
+<li><strong>Official website:</strong> <a href="http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page">http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page</a></li>
+<li><strong>Homelab url:</strong> <code>https://ldap.DOMAIN_NAME/</code></li>
+<li><strong>Authentication:</strong> Login is done via a &ldquo;DN&rdquo; and a password <code>ADMIN_PASSWORD</code>.</li>
+<li><strong>Stack name:</strong> <code>base</code> (deployed via <code>./deploy.sh base</code>).</li>
+</ul>
+
+<h3 id="description">Description</h3>
+
+<p>A web based LDAP browser to manage OpenLDAP server. You can use this web interface to create/edit/delete users and roles/groups.</p>
+
+<h3 id="login-dn">Login DN</h3>
+
+<p>The Login DN is a &ldquo;distinguished name&rdquo; and usually starts with a keyword such as &ldquo;dc&rdquo;. In this case, in order to log-in, your login DN is a combination of <code>dc=admin</code> and <code>DOMAIN_COMPONENT</code> defined in your <code>.env</code> file. For example: <code>dc=admin,dc=example,dc=homelab,dc=com</code>.</p>
+
+<h3 id="creating-a-user">Creating a user</h3>
+
+<p>The LDAP groups and an admin account have been set up for you automatically. You don&rsquo;t have to do any additional configuration. To add a new user, all you have to do is to create a new user account in the <code>ou=users</code> group and then add this user to their respecive role (the group in <code>ou=groups</code>).</p>
+
+<p>First, navigate to <code>ou=users,DOMAIN_COMPONENT</code> (for example: <code>ou=users,dc=example,dc=homelab,dc=com</code>) as shown in the screenshot below. Select the <code>ou=users</code>, click &ldquo;Create child entry&rdquo;, and select <strong>&ldquo;Generic User Account&rdquo;</strong>.</p>
+
+<p><img src="../images/phpldapadmin_createuser_0.png" alt="Screenshot" /></p>
+
+<p>Next, fill in the details. Don&rsquo;t forget to specify GID Number to &ldquo;user&rdquo;. This is a pre-created posix group with GID Number 500. You will also have to select &ldquo;Login shell&rdquo;, which does not really mapper and you can simply choose &ldquo;No Login&rdquo;.</p>
+
+<p><img src="../images/phpldapadmin_createuser_1.png" alt="Screenshot" /></p>
+
+<p>Finally, validate the attributes and click &ldquo;Commit&rdquo; button at the bottom.</p>
+
+<p><img src="../images/phpldapadmin_createuser_2.png" alt="Screenshot" /></p>
+
+<h3 id="adding-a-user-to-role-group">Adding a user to role/group</h3>
+
+<p>To assign a user to a role/group, first navigate to the <code>ou=groups,DOMAIN_COMPONENT</code> (for example: <code>ou=groups,dc=example,dc=homelab,dc=com</code>) and click on the group you want to assign the user to. For the purpose of the example, we will assign the user to group &ldquo;portainer&rdquo;.</p>
+
+<p><img src="../images/phpldapadmin_assignuser_0.png" alt="Screenshot" /></p>
+
+<p>Next, click on &ldquo;Add value&rdquo; at the bottom and then click on the magnifying glass icon next to the empty input field.</p>
+
+<p><img src="../images/phpldapadmin_assignuser_1.png" alt="Screenshot" /></p>
+
+<p>Next, find the user you want to add. <strong>Make sure you clock on the [+] icon to see the children!</strong></p>
+
+<p><img src="../images/phpldapadmin_assignuser_2.png" alt="Screenshot" /></p>
+
+<p><img src="../images/phpldapadmin_assignuser_3.png" alt="Screenshot" /></p>
+
+<p><img src="../images/phpldapadmin_assignuser_4.png" alt="Screenshot" /></p>
+
+<p>Finally, click &ldquo;Update Object&rdquo; and &ldquo;Commit&rdquo;.</p>
+
+<p><img src="../images/phpldapadmin_assignuser_5.png" alt="Screenshot" /></p>
+
+<p><img src="../images/phpldapadmin_assignuser_6.png" alt="Screenshot" /></p>
+
+<p><strong>That&rsquo;s it! You can repeat this for any other role/group.</strong></p>
 
 
 <footer class="footline">
@@ -2916,19 +2988,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/homelab/js/clipboard.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.min.js?1585405155"></script>
-    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585405155"></script>
-    <script src="/homelab/js/jquery.sticky.js?1585405155"></script>
-    <script src="/homelab/js/featherlight.min.js?1585405155"></script>
-    <script src="/homelab/js/highlight.pack.js?1585405155"></script>
+    <script src="/homelab/js/clipboard.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.min.js?1585430646"></script>
+    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585430646"></script>
+    <script src="/homelab/js/jquery.sticky.js?1585430646"></script>
+    <script src="/homelab/js/featherlight.min.js?1585430646"></script>
+    <script src="/homelab/js/highlight.pack.js?1585430646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585405155"></script>
-    <script src="/homelab/js/learn.js?1585405155"></script>
-    <script src="/homelab/js/hugo-learn.js?1585405155"></script>
+    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585430646"></script>
+    <script src="/homelab/js/learn.js?1585430646"></script>
+    <script src="/homelab/js/hugo-learn.js?1585430646"></script>
 
-    <link href="/homelab/mermaid/mermaid.css?1585405155" rel="stylesheet" />
-    <script src="/homelab/mermaid/mermaid.js?1585405155"></script>
+    <link href="/homelab/mermaid/mermaid.css?1585430646" rel="stylesheet" />
+    <script src="/homelab/mermaid/mermaid.js?1585430646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
