@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on Homelab</title>
+    <link>https://matusnovak.github.io/homelab/</link>
+    <description>Recent content in Index on Homelab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://matusnovak.github.io/homelab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Requirements</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/1_requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/1_requirements/</guid>
+      <description>In order to install the services you will need the following:
+System requirements  Any Intel or AMD based 64-bit Linux distribution. Preferably an Ubuntu. Sorry, Raspberry Pi is not supported. At least 4GB of free memory At least 8GB of disk space  Docker You will also need Docker and Docker Compose.
+Dependencies Additionally, you will need Python3 and git. If you are on an Ubuntu, you can install them via: sudo apt-get install -y python3 git.</description>
+    </item>
+    
+    <item>
+      <title>2. Installation</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/2_install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/2_install/</guid>
+      <description>2.1. Clone the entire repository: git clone https://github.com/matusnovak/homelab.git cd homelab 2.2. Setup the environment variables You will need to provide basic configuration via environment variables. These variables will be used by the Docker Compose to deploy the services. A sample configuration file is provided inside of the root directory of the repository called .env.sample.
+Make sure you can see hidden files in your OS. Files starting with a dot in their filenames are considered hidden.</description>
+    </item>
+    
+    <item>
+      <title>3. Configuration</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/3_configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/3_configuration/</guid>
+      <description>These variables are located in the .env file. A sample .env.sample is provided in the root folder of the repository.
+Make sure you configure these variables! The default values are only as an example. The deployment will not work unless you change them.
+ DOMAIN_NAME (example: homelab.example.com) This is the domain name that will be used for Traefik and all of your services. This domain name will also be used to generate the TLS certificates via Let&amp;rsquo;s Encrypt.</description>
+    </item>
+    
+    <item>
+      <title>4. Deploy</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/4_deploy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/4_deploy/</guid>
+      <description>After you have configured the environment variables, you can deploy the initial stack.
+Don&amp;rsquo;t use docker-compose up within the root directory. It will only mess up things. Use the provided deploy.sh script instead.
+ As you may have already noticed, the root folder contains multiple docker-compose.*.yml files. Each one of these files is considered a stack. All of these files define a set of services. Each service will be deployed based on the environment variables in the .</description>
+    </item>
+    
+    <item>
+      <title>Adminer</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/adminer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/adminer/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Artifactory</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Drone</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/drone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/drone/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>FileBrowser</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/filebrowser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/filebrowser/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/gitea/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Grafana &#43; Prometheus</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/grafana/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Haste</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/haste/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/haste/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Jellyfin</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/jellyfin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/jellyfin/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>NextCloud &#43; OnlyOffice</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>OpenProject</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/openproject/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/openproject/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>phpLdapAdmin</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/phpldapadmin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/phpldapadmin/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Pi-Hole &#43; Cloudflared</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/pihole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/pihole/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Portainer</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Rocket.chat</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/rocketchat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/rocketchat/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Static (Nginx)</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/static/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/static/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>https://matusnovak.github.io/homelab/tutorial/5_services/traefik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://matusnovak.github.io/homelab/tutorial/5_services/traefik/</guid>
+      <description>TODO</description>
+    </item>
+    
+  </channel>
+</rss>

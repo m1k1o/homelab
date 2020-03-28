@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/homelab/images/favicon.png" type="image/png">
+
+    <title>3. Configuration :: Homelab</title>
+
+    
+    <link href="/homelab/css/nucleus.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/fontawesome-all.min.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/hybrid.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/featherlight.min.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/perfect-scrollbar.min.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/auto-complete.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/atom-one-dark-reasonable.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/theme.css?1585404255" rel="stylesheet">
+    <link href="/homelab/css/hugo-theme.css?1585404255" rel="stylesheet">
+    
+
+    <script src="/homelab/js/jquery-3.3.1.min.js?1585404255"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/homelab/tutorial/3_configuration/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <h3 style="color:white;">Homelab</h3>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/homelab/js/lunr.min.js?1585404255"></script>
+<script type="text/javascript" src="/homelab/js/auto-complete.js?1585404255"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/matusnovak.github.io\/homelab";
+    
+</script>
+<script type="text/javascript" src="/homelab/js/search.js?1585404255"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/homelab/tutorial/" title="Tutorial" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/homelab/tutorial/">
+          Tutorial
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/1_requirements/" title="1. Requirements" class="dd-item ">
+        <a href="/homelab/tutorial/1_requirements/">
+        1. Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/2_install/" title="2. Installation" class="dd-item ">
+        <a href="/homelab/tutorial/2_install/">
+        2. Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/3_configuration/" title="3. Configuration" class="dd-item active">
+        <a href="/homelab/tutorial/3_configuration/">
+        3. Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/4_deploy/" title="4. Deploy" class="dd-item ">
+        <a href="/homelab/tutorial/4_deploy/">
+        4. Deploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/homelab/tutorial/5_services/" title="5. Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/homelab/tutorial/5_services/">
+          5. Services
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/adminer/" title="Adminer" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/adminer/">
+        Adminer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/artifactory/" title="Artifactory" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/artifactory/">
+        Artifactory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/drone/" title="Drone" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/drone/">
+        Drone
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/filebrowser/" title="FileBrowser" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/filebrowser/">
+        FileBrowser
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/gitea/" title="Gitea" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/gitea/">
+        Gitea
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/grafana/" title="Grafana &#43; Prometheus" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/grafana/">
+        Grafana &#43; Prometheus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/haste/" title="Haste" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/haste/">
+        Haste
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/jellyfin/" title="Jellyfin" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/jellyfin/">
+        Jellyfin
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/nextcloud/" title="NextCloud &#43; OnlyOffice" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/nextcloud/">
+        NextCloud &#43; OnlyOffice
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/openproject/" title="OpenProject" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/openproject/">
+        OpenProject
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/phpldapadmin/" title="phpLdapAdmin" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/phpldapadmin/">
+        phpLdapAdmin
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/pihole/" title="Pi-Hole &#43; Cloudflared" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/pihole/">
+        Pi-Hole &#43; Cloudflared
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/portainer/" title="Portainer" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/portainer/">
+        Portainer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/rocketchat/" title="Rocket.chat" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/rocketchat/">
+        Rocket.chat
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/static/" title="Static (Nginx)" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/static/">
+        Static (Nginx)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/homelab/tutorial/5_services/traefik/" title="Traefik" class="dd-item ">
+        <a href="/homelab/tutorial/5_services/traefik/">
+        Traefik
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matusnovak/homelab/"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/homelab/'>Index</a> > <a href='/homelab/tutorial/'>Tutorial</a> > 3. Configuration
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#domain-name">DOMAIN_NAME</a></li>
+<li><a href="#domain-component">DOMAIN_COMPONENT</a></li>
+<li><a href="#tls-email">TLS_EMAIL</a></li>
+<li><a href="#http-port">HTTP_PORT</a></li>
+<li><a href="#https-port">HTTPS_PORT</a></li>
+<li><a href="#subnet-and-mask">SUBNET_AND_MASK</a></li>
+<li><a href="#admin-password">ADMIN_PASSWORD</a></li>
+<li><a href="#nextcloud-data">NEXTCLOUD_DATA</a></li>
+<li><a href="#jellyfin-media">JELLYFIN_MEDIA</a></li>
+<li><a href="#gitea-data">GITEA_DATA</a></li>
+<li><a href="#filebrowser-media">FILEBROWSER_MEDIA</a></li>
+<li><a href="#cloudflared-ip">CLOUDFLARED_IP</a></li>
+<li><a href="#openproject-secret-key">OPENPROJECT_SECRET_KEY</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3. Configuration
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>These variables are located in the <code>.env</code> file. A sample <code>.env.sample</code> is provided in the root folder of the repository.</p>
+
+
+<div class="notices note" ><p>Make sure you configure these variables! The default values are only as an example. The deployment will not work unless you change them.</p>
+</div>
+
+
+<h4 id="domain-name">DOMAIN_NAME</h4>
+
+<p>(example: <code>homelab.example.com</code>) This is the domain name that will be used for Traefik and all of your services. This domain name will also be used to generate the TLS certificates via Let&rsquo;s Encrypt.</p>
+
+<h4 id="domain-component">DOMAIN_COMPONENT</h4>
+
+<p>(example: <code>dc=homelab,dc=example,dc=com</code>) This is a name of the LDAP domain. This should match your <code>DOMAIN_NAME</code> and must start with a <code>dc=...</code>.</p>
+
+<h4 id="tls-email">TLS_EMAIL</h4>
+
+<p>(example: <code>email@example.com</code>) An email to use for Let&rsquo;s Encrypt certificates, this is used by the Traefik proxy.</p>
+
+<h4 id="http-port">HTTP_PORT</h4>
+
+<p>(example: <code>80</code>) The port to use for http by Traefik.</p>
+
+<h4 id="https-port">HTTPS_PORT</h4>
+
+<p>(example: <code>443</code>) The port to use for https (and TLS) by Traefik.</p>
+
+<h4 id="subnet-and-mask">SUBNET_AND_MASK</h4>
+
+<p>(example: <code>172.18.0.0/16</code>) The subnet with a mask forthe docker network that will be used by all of the services for internal communication. Make sure this is an available subnet. If you are running a fresh install od Docker, and you have not created any networks, then this default subnet <code>172.18.0.0/16</code> will be available to you.</p>
+
+<h4 id="admin-password">ADMIN_PASSWORD</h4>
+
+<p>(example: <code>admin</code>) This is a master password that will be used for: OpenLDAP admin, Postgres master password and Postgres database passwords, Grafana admin, NextCloud admin, Traefik dashboard admin, and Adminer admin login. Make sure you use something secure! You can generate one by running the following command: <code>openssl rand -hex 16</code></p>
+
+<h4 id="nextcloud-data">NEXTCLOUD_DATA</h4>
+
+<p>(example: <code>/mount/external/nextcloud</code>) The path to an existing directory that will be used to store NextCloud files and configuration files. It is wise to use some large mounted drive in order to store large NextCloud user files.</p>
+
+<h4 id="jellyfin-media">JELLYFIN_MEDIA</h4>
+
+<p>(example: <code>/mount/external/share</code>) The path to an media folder with movies and tv shows for Jellyfin volume.</p>
+
+<h4 id="gitea-data">GITEA_DATA</h4>
+
+<p>(example: <code>/mount/external/gitea</code>) The path to to use for Gitea volume to store repository data.</p>
+
+<h4 id="filebrowser-media">FILEBROWSER_MEDIA</h4>
+
+<p>(example: <code>/mount/external/share</code>) The path to to use for FileBrowser. The FileBrowser can be used to upload or download files from this path.</p>
+
+<h4 id="cloudflared-ip">CLOUDFLARED_IP</h4>
+
+<p>(example: <code>172.18.255.1</code>) This is a static IP address that will be used by the Cloudflared service. Make sure this is a valid IP address based on the <strong>SUBNET_AND_MASK</strong>. Use an IP address from the top of the subnet range. Don&rsquo;t use <code>172.18.0.2</code> or similar one.</p>
+
+<h4 id="openproject-secret-key">OPENPROJECT_SECRET_KEY</h4>
+
+<p>Any random string to use for NextCloud. You can generate one by running the following command: <code>openssl rand -hex 16</code>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/homelab/tutorial/5_services/traefik/" title="Traefik"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/homelab/tutorial/5_services/" title="5. Services" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/homelab/js/clipboard.min.js?1585404255"></script>
+    <script src="/homelab/js/perfect-scrollbar.min.js?1585404255"></script>
+    <script src="/homelab/js/perfect-scrollbar.jquery.min.js?1585404255"></script>
+    <script src="/homelab/js/jquery.sticky.js?1585404255"></script>
+    <script src="/homelab/js/featherlight.min.js?1585404255"></script>
+    <script src="/homelab/js/highlight.pack.js?1585404255"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/homelab/js/modernizr.custom-3.6.0.js?1585404255"></script>
+    <script src="/homelab/js/learn.js?1585404255"></script>
+    <script src="/homelab/js/hugo-learn.js?1585404255"></script>
+
+    <link href="/homelab/mermaid/mermaid.css?1585404255" rel="stylesheet" />
+    <script src="/homelab/mermaid/mermaid.js?1585404255"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

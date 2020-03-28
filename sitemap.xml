@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/1_requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/2_install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/3_configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/4_deploy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/adminer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/artifactory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/drone/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/filebrowser/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/gitea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/grafana/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/haste/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/jellyfin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/nextcloud/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/openproject/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/phpldapadmin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/pihole/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/rocketchat/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/static/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/5_services/traefik/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matusnovak.github.io/homelab/tutorial/</loc>
+  </url>
+  
+</urlset>
